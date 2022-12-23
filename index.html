@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+    background-color: #348322 ;
+    background-image: url(../post1.jpg); 
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+.qPanel{
+    margin:auto;
+    width:800px;
+    vertical-align: center;
+    margin:0 auto;
+    background-color: #79B96A ;
+    border: none ;
+    border-radius : 10px ;
+    padding: 20px ;
+    height: 160px ;
+    font-size: 15pt;
+}
+.ques{
+    font-size : 18pt;
+    font-weight: bold ;
+}
+.nxtBtn{
+    position: relative ;
+    right : 10px ;
+    float: right;
+    border:none ;
+    font-size: 18pt ;
+    background-color: #348322  ;
+    color: #ffffff ;
+    width: 80px ;
+    height: 35px ;
+.button{
+    background-color:rgb(90,104,235);
+    border: 2px solid rgb(90,104,235);
+    color:white;
+    padding:10px;
+    display:block;
+    width:200px;
+    font-size:16px;
+    border-radius:2px;
+    margin-bottom:30px;
+}
+    </style>
+    </head>
+    <body>
+        <br/><br/><br/>
+        <div class="qPanel">
+            <div style="font-size:20pt;">Quiz</div>
+             <div class="ques" id="question"> 
+             </div>
+             <div><input type="radio" id="opt1" name="options">
+                <span id="optt1"></span>
+            </div>
+            <div><input type="radio" id="opt2" name="options">
+                <span id="optt2"></span>
+            </div>
+            <div><input type="radio" id="opt3" name="options">
+                <span id="optt3"></span>
+            </div>
+            <div class="lftCss">
+            <button class="nxtBtn" onclick="checkAnswer()">next ></button>
+            </div>
+        </div>
+        <script src="data.json"></script>
+        <script src="index.json"></script>
+        <input type="submit" class="button" id="special" value="get data">
+        <div id="data"></div>
+        <script>
+            let btn = document.getElementById("special")
+        // let dataele = document.getElementById('data')
+        // btn.addEventListener('click',loadData)
+
+
+         //   function loaddata () {
+          //  let xhr = new xmlhttprequest()
+
+          //  xhr.open('GET','data.json',true)
+          //  xhr.send()
+
+           //xhr.onprogress=function(){
+           // dataele.innerjson="Loading...."
+           }
+          // xhr.onload = function(){
+            //  dataele.innerjson = xhr.response json;
+           }
+        }
+        </script>
+    </body>
+    </html>

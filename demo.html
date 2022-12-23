@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-directions: column;
+            }
+            .button{
+                background-color:rgb(90,104,235);
+                border: 2px solid rgb(90,104,235);
+                color:white;
+                padding: 10px;
+                display: block;
+                width:200px;
+                font-size: 16px;
+                border-radius: 2px;
+                margin-bottom: 30px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <input type="submit" class="button" id="special" value="Get Data">
+        <div id="data"></div>
+        <script>
+            
+            let btn = document.getElementById("special")
+
+            let dataele = document.getElementById('data')
+             
+            btn.addEventListener('click', loadData)
+
+            function loadData(){
+                let xhr = new XMLHttpRequest()
+                xhr.open('GET',data.json,true)
+                xhr.send()
+
+                xhr.onprogress = function (){
+                    dataele.innertext = xhr.responseText;
+                }
+            }
+        </script>
+
+
+    </body>
+</html>
